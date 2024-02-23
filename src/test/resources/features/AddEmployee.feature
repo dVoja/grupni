@@ -2,6 +2,7 @@ Feature: Add employee in HRMS application
 
   Background:
     When user enters admin username and password
+    And user clicks on login button
     Then user is successfully logged in
     When user clicks on PIM option
     And user clicks on Add Employee option

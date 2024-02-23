@@ -32,7 +32,7 @@ public class LoginPage extends CommonMethods {
     }
 
     public LoginPage() {
-        //page factory we use to initialize all the ele and driver we pass as an argument to it. This keyword means,we need to initialize all the lele of this class
+        //page factory we use to initialize all the ele and driver we pass as an argument to it. This keyword means,we need to initialize all the ele of this class
         PageFactory.initElements(driver, this);
     }
 }
