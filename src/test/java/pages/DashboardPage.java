@@ -15,6 +15,12 @@ public class DashboardPage extends CommonMethods {
     @FindBy(id = "welcome")
     public WebElement welcomeMessageOption;
 
+    @FindBy (id="menu_admin_viewAdminModule")
+    public WebElement adminOption;
+
+    @FindBy (id="menu_admin_Qualifications")
+    public WebElement qualifications;
+
 
 
     public DashboardPage(){
