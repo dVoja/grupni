@@ -1,6 +1,5 @@
 package utils;
 
-import io.cucumber.java.jv.Lan;
 import pages.*;
 
 public class PageInitializer {
@@ -11,6 +10,7 @@ public class PageInitializer {
     public static EmployeeMembershipPage employeeMembershipPage;
     public static EmployeeMyInfoPage employeeMyInfoPage;
     public static LanguageProficiencyPage languageProficiencyPage;
+    public static AddLanguagePage addLanguagePage;
 
 
     public static AdminMembershipsPage adminMembershipsPage;
@@ -23,6 +23,7 @@ public class PageInitializer {
         employeeMembershipPage = new EmployeeMembershipPage();
         employeeMyInfoPage = new EmployeeMyInfoPage();
         languageProficiencyPage = new LanguageProficiencyPage();
+        addLanguagePage = new AddLanguagePage();
 
     }
 }
