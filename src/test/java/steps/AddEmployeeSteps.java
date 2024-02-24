@@ -31,7 +31,8 @@ public class AddEmployeeSteps extends CommonMethods {
 
     @When("user submits incomplete employee information")
     public void user_submits_incomplete_employee_information() {
-
+    sendText("v", addEmployeePage.firstNameLoc);
+    sendText("d", addEmployeePage.middleNameLoc);
     }
 
     @When("user clicks on save button")
