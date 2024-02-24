@@ -13,10 +13,10 @@ Feature: Add employee in HRMS application
     Then user successfully added employee by providing first name and middle name and last name
   @addEmployeeById @addEmployee
   Scenario:Adding an employee by providing unique id
-    When user enters first name, middle name, last name and employee ID and clicks on save
+    When user enters "<first name>", "<middle name>", "<last name>" and "<employee ID>" and clicks on save
     Then user successfully added employee by providing employee ID
   @submitEmployeeInfo @addEmployee
   Scenario: Submit incomplete employee information
     When user submits incomplete employee information
     And user clicks on save button
-    Then user should see error message near the respective input fields
+    Then user should see "Required" near the respective input fields

@@ -16,8 +16,10 @@ public class AddEmployeePage extends CommonMethods {
     public WebElement saveButton;
     @FindBy(id="photofile")
     public WebElement photograph;
+
     @FindBy(id="user_name")
     public WebElement username;
+
     @FindBy(id="user_password")
     public WebElement password;
     @FindBy(id="re_password")
@@ -26,6 +28,10 @@ public class AddEmployeePage extends CommonMethods {
     public WebElement checkBox;
     @FindBy(id="employeeId")
     public WebElement empIdLoc;
+
+    @FindBy(xpath="//span[@class='validation-error']")
+    public WebElement errorMsgLoc;
+
     public AddEmployeePage(){
         PageFactory.initElements(driver, this);
     }
