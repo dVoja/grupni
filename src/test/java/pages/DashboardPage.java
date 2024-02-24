@@ -14,14 +14,12 @@ public class DashboardPage extends CommonMethods {
     public WebElement addEmployeeOption;
     @FindBy(id = "welcome")
     public WebElement welcomeMessageOption;
-
     @FindBy (id="menu_admin_viewAdminModule")
     public WebElement adminOption;
-
     @FindBy (id="menu_admin_Qualifications")
     public WebElement qualifications;
-
-
+    @FindBy(id="menu_admin_viewLanguages")
+    public WebElement addLanguages;
 
     public DashboardPage(){
         PageFactory.initElements(driver,this);

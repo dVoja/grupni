@@ -30,6 +30,14 @@ public class LoginPage extends CommonMethods {
     public void clickLoginButton(){
         click(login.loginButton);
     }
+    public void enterEmpUsername(){
+        sendText(ConfigReader.read("employeeUsername"), login.usernameField);
+    }
+    public void enterEmpPassword(){
+        sendText(ConfigReader.read("employeePassword"), login.passwordField);
+    }
+
+
 
     public LoginPage() {
         //page factory we use to initialize all the ele and driver we pass as an argument to it. This keyword means,we need to initialize all the ele of this class

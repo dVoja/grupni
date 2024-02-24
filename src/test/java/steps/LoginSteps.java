@@ -36,6 +36,11 @@ public class LoginSteps extends CommonMethods {
 
         Assert.assertEquals(errorMessage, errorMessageValue);
     }
+    @When("user enters employee username and password")
+    public void user_enters_employee_username_and_password() {
+        login.enterEmpUsername();
+        login.enterEmpPassword();
+    }
 
 
 }
