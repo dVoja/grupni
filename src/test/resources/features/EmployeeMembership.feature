@@ -22,11 +22,11 @@ Feature: Navigating to the membership section
 
         Examples:
         |Membership|Subscription Paid By|Subscription Amount|Currency|Subscription Commence Date|Subscription Renewal Date|
-        |Gold      |Individual          |$100,00            |USD     |2024-03-05                |2025-03-05               |
-        |Black     |Individual          |$500,00            |USD     |2024-02-01                |2025-02-02               |
-        |Gym       |Company             |$200,00            |USD     |2024-01-01                |2025-01-01               |
-        |Costco    |Company             |$400,00            |USD     |                          |2025-02-02               |
-        |Amazon    |Company             |$149,00            |        |2024-01-01                |2024-01-01               |
+        |Gold      |Individual          |100.00            |USD     |2024-03-05                |2025-03-05               |
+        |Black     |Individual          |500.00            |USD     |2024-02-01                |2025-02-02               |
+        |Gym       |Company             |200.00            |USD     |2024-01-01                |2025-01-01               |
+        |Costco    |Company             |400.00            |USD     |                          |2025-02-02               |
+        |Amazon    |Company             |149.00            |USD     |2024-01-01                |2024-01-01               |
 
   @mandatoryMembershipFields @employeeMembership
       Scenario: validating that mandatory fields are filled in

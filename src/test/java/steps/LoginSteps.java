@@ -28,12 +28,8 @@ public class LoginSteps extends CommonMethods {
         sendText(usernameValue, login.usernameField);
         sendText(passwordValue, login.passwordField);
         click(login.loginButton);
-        //to get the error message, we need this web element
         WebElement errorLoc = driver.findElement(By.id("spanMessage"));
         String errorMessageValue = errorLoc.getText();
-        //System.out.println(errorMessageValue);
-        //validation of error message is pending
-
         Assert.assertEquals(errorMessage, errorMessageValue);
     }
     @When("user enters employee username and password")

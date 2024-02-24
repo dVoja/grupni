@@ -11,8 +11,8 @@ import org.junit.runner.RunWith;
         //features we use to provide the path of the feature files
         features = "src/test/resources/features",
         glue = "steps",
-        dryRun = false,
-        tags = "@validLogin",
+        dryRun = true,
+        tags = "@searchEmployee",
         plugin = {"pretty"}
 )
 
