@@ -18,7 +18,7 @@ public class DashboardPage extends CommonMethods {
     public WebElement adminOption;
     @FindBy (id="menu_admin_Qualifications")
     public WebElement qualifications;
-    @FindBy(id="menu_admin_viewLanguages")
+    @FindBy(xpath = "//a[@id='menu_admin_Qualifications']")
     public WebElement addLanguages;
 
     public DashboardPage(){

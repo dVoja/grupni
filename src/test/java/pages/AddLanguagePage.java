@@ -16,6 +16,11 @@ public class AddLanguagePage extends CommonMethods {
     @FindBy(id="btnSave")
     public WebElement saveBtn;
 
+    @FindBy (id="menu_admin_viewLanguages")
+    public WebElement addLangFromQualifications;
+
+    public String langName = "Arabic";
+
     public AddLanguagePage(){
         PageFactory.initElements(driver, this);
     }
