@@ -2,6 +2,7 @@ package steps;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import utils.CommonMethods;
@@ -40,5 +41,15 @@ public class AddLanguageSteps extends CommonMethods {
     @Then("user has successfully added a language")
     public void user_has_successfully_added_a_language() {
         List<WebElement> langTable = driver.findElements(By.id("recordsListTable"));
+        boolean languageFound = false;
+        for(WebElement lang:langTable) {
+            String langOpt = lang.getText();
+            if (langOpt.contains(addLanguagePage.langName)) {
+                languageFound = true;
+                break;
+            }
+        }
+            Assert.assertTrue("Language not added", languageFound);
+        }
     }
-}
+
