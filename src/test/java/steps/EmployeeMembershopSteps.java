@@ -13,12 +13,12 @@ public class EmployeeMembershopSteps extends CommonMethods {
     @Given("user can check if membership options are clickable")
     public void user_can_check_if_membership_options_are_clickable() {
         click(driver.findElement(By.id("btnAddMembershipDetail")));
-        Boolean ClicableMembership = isClickable(employeeMembershipPage.membershipName);
-        Boolean ClicableSub = isClickable(employeeMembershipPage.subscriptionPaidBy);
-        Boolean ClicableSubAmnt = isClickable(employeeMembershipPage.subscriptionAmount);
-        Boolean ClicableCurrency = isClickable(employeeMembershipPage.currency);
-        Boolean ClicableSubStartDate = isClickable(employeeMembershipPage.subCommenceDate);
-        Boolean ClicableSubEndDate = isClickable(employeeMembershipPage.subRenewalDate);
+        boolean ClicableMembership = isClickable(employeeMembershipPage.membershipName);
+        boolean ClicableSub = isClickable(employeeMembershipPage.subscriptionPaidBy);
+        boolean ClicableSubAmnt = isClickable(employeeMembershipPage.subscriptionAmount);
+        boolean ClicableCurrency = isClickable(employeeMembershipPage.currency);
+        boolean ClicableSubStartDate = isClickable(employeeMembershipPage.subCommenceDate);
+        boolean ClicableSubEndDate = isClickable(employeeMembershipPage.subRenewalDate);
 
         Assert.assertTrue(ClicableMembership);
         Assert.assertTrue(ClicableSub);
@@ -26,6 +26,8 @@ public class EmployeeMembershopSteps extends CommonMethods {
         Assert.assertTrue(ClicableCurrency);
         Assert.assertTrue(ClicableSubStartDate);
         Assert.assertTrue(ClicableSubEndDate);
+
+
     }
 
     @Given("system validates are mandatory fields filled before saving")
