@@ -1,26 +1,23 @@
-Feature: Search an employee in HRMS system
-
-  Background:
-    When user enters admin username and password
-    And user clicks on login button
-    Then user is successfully logged in
-    When user clicks on PIM option
-    And user clicks on employee list option
-@searchEmployee
-  Scenario: search for employee record by full name
-    When user enters employee's first and or last name
-    And user clicks on the search button
-    Then user should see all matching employee records
-    And the search result should handle partial name matches and variations in capitalization
-@searchEmployee
-  Scenario: search for employee record by unique employee id
-    When user enters a unique employee id
-    And user clicks on the search button
-    Then user should see the employee record
-
-@searchEmployee
-  Scenario: no matching employee records found
-    When user enters incomplete or incorrect employee information
-    And clicks on the search button
-    Then user should see a "No records found" message
-    And no employee record should be displayed
+Feature: Employee Search
+    Background:
+      When user enters admin username and password
+      And user clicks on login button
+      Then user is successfully logged in
+      When user clicks on PIM option
+      And user clicks on Employee List option
+  @searchEmployee
+  Scenario: Search for an employee by full name
+    When Admin search for an employee using their full name
+    Then the search should return all matching employee records
+  @searchEmployee
+  Scenario: Search for an employee by partial name with variations in capitalization
+    When Admin search for an employee using partial name with variations in capitalization
+    Then the search should return all matching employee records
+  @searchEmployee
+  Scenario: Search for an employee by unique employee ID
+    When Admin search for an employee using their unique employee ID
+    Then the search should return the exact employee record associated with the provided employee ID
+  @searchEmployee
+  Scenario: Display "No Records Found" message when no matching employee records are found
+    When Admin search for an employee with non-existent criteria
+    Then the system should provide a message "No Records Found"
