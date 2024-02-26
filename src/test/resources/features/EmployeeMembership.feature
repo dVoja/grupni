@@ -7,16 +7,11 @@ Feature: Navigating to the membership section
     When user clicks on My Info options
     Then user navigates to the Memberships section
 
-  @membershipFields @employeeMembership
+  @membershipFields @employeeMembership @membershipedit
     Scenario: validating that fields are displayed and editable
-      When user clicks on a membership name in assigned memberships
-      And user selects Membership from the Membership dropdown
-      And user selects Subscription Paid By from the Subscription Paid By dropdown
-      And user enters Subscription Amount into the Subscription Amount field
-      And user selects Currency from the Currency dropdown
-      And user selects Subscription Commence Date from the Subscription Commence Date calendar
-      And user selects Subscription Renewal Date from the Subscription Renewal Date calendar|
-      Then user clicks on a save button
+      Given user can check if membership options are clickable
+      And system validates are mandatory fields filled before saving
+      And user should be able to edit membership options.
 
   @mandatoryMembershipFields @employeeMembership
       Scenario: validating that mandatory fields are filled in

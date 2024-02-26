@@ -1,5 +1,6 @@
 package steps;
 
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -9,7 +10,46 @@ import utils.CommonMethods;
 
 public class EmployeeMembershopSteps extends CommonMethods {
 
+    @Given("user can check if membership options are clickable")
+    public void user_can_check_if_membership_options_are_clickable() {
+        click(driver.findElement(By.id("btnAddMembershipDetail")));
+        Boolean ClicableMembership = isClickable(employeeMembershipPage.membershipName);
+        Boolean ClicableSub = isClickable(employeeMembershipPage.subscriptionPaidBy);
+        Boolean ClicableSubAmnt = isClickable(employeeMembershipPage.subscriptionAmount);
+        Boolean ClicableCurrency = isClickable(employeeMembershipPage.currency);
+        Boolean ClicableSubStartDate = isClickable(employeeMembershipPage.subCommenceDate);
+        Boolean ClicableSubEndDate = isClickable(employeeMembershipPage.subRenewalDate);
 
+        Assert.assertTrue(ClicableMembership);
+        Assert.assertTrue(ClicableSub);
+        Assert.assertTrue(ClicableSubAmnt);
+        Assert.assertTrue(ClicableCurrency);
+        Assert.assertTrue(ClicableSubStartDate);
+        Assert.assertTrue(ClicableSubEndDate);
+    }
+
+    @Given("system validates are mandatory fields filled before saving")
+    public void system_validates_are_mandatory_fields_filled_before_saving() {
+        selectFromDropDown(employeeMembershipPage.membershipName, MembershipIndex );
+        selectFromDropDown(employeeMembershipPage.subscriptionPaidBy, 1);
+        employeeMembershipPage.subCommenceDate.click();
+        selectRandomDate(driver);
+
+
+        boolean isMembershipFilled = checkIfInputFieldsFilled(employeeMembershipPage.membershipName );
+        boolean isSubPaidByFilled = checkIfInputFieldsFilled(employeeMembershipPage.subscriptionPaidBy);
+        boolean isSubstartDateFilled = checkIfInputFieldsFilled(employeeMembershipPage.subCommenceDate);
+
+        Assert.assertTrue(isMembershipFilled);
+        Assert.assertTrue(isSubPaidByFilled);
+        Assert.assertTrue(isSubstartDateFilled);
+
+        click(employeeMembershipPage.saveBtn);
+    }
+    @Given("user should be able to edit membership options.")
+    public void user_should_be_able_to_edit_membership_options() {
+
+    }
     @When("user clicks on My Info options")
     public void user_clicks_on_my_info_options() {
         click(employeeMyInfoPage.myInfoOption);

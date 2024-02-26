@@ -17,7 +17,7 @@ public class AdminMembershipSteps extends CommonMethods {
 
     @When("user clicks on Membership option")
     public void user_clicks_on_membership_option() {
-        click(dashboardPage.membershipOption);
+        click(employeeMyInfoPage.membershipOption);
     }
 
     @When("user clicks on add button")
