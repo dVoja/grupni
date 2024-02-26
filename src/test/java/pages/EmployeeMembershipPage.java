@@ -6,7 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import utils.CommonMethods;
 
 public class EmployeeMembershipPage extends CommonMethods {
-    @FindBy(id="btnAddMembershipDetail")
+    @FindBy(xpath="//p[@id='listActions']//input[1]]")
     public WebElement addMembershipBtn;
 
     @FindBy(id="membership_membership")

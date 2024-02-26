@@ -10,10 +10,12 @@ public class AdminMembershipsPage extends CommonMethods {
     public WebElement addBtn;
 
     @FindBy (id="membership_name")
-    public WebElement membershipName;
+    public WebElement membershipNameTextBox;
 
     @FindBy (id="btnSave")
     public WebElement saveBtn;
+
+    public String membershipName= "Platinum";
 
     public AdminMembershipsPage(){
         PageFactory.initElements(driver, this);

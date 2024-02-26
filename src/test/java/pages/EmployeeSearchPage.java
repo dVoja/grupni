@@ -14,7 +14,7 @@ public class EmployeeSearchPage extends CommonMethods {
     public WebElement empNameLoc;
 
     @FindBy(id="searchBtn")
-    public WebElement searchOption;
+    public WebElement searchBtn;
 
     public EmployeeSearchPage(){
         PageFactory.initElements(driver,this);
