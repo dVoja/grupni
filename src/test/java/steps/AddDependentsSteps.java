@@ -32,8 +32,6 @@ public class AddDependentsSteps extends CommonMethods {
             sendText(dependent.get("DOB"), driver.findElement(By.id("dependent_dateOfBirth")));
             click(driver.findElement(By.id("btnSaveDependent")));
             click(driver.findElement(By.id("btnAddDependent")));
-
-
         }
     }
     @Then("employee should be able to edit dependents")

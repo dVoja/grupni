@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         glue = "steps",
         dryRun = false,
         tags = "@dependents",
-        plugin = {"pretty"}
+        plugin = {"pretty","html:target/cucumber.html", "json:target/cucumber.json"}
 )
 
 public class RunnerClass {

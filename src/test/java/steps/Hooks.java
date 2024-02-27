@@ -16,8 +16,18 @@ public class Hooks extends CommonMethods {
     @After
     //this method will always execute before every scenario
     //because it has @after tag which is pre-condition
-    public void close(){
+    public void close(Scenario scenario){
+        byte[] pic;
+        if(scenario.isFailed()){
+            pic = takeScreenshot("failed/"+scenario.getName());
+        }else{
+            pic = takeScreenshot("passed/"+scenario.getName());
+        }
+
+        //attach screenshot to report
+        scenario.attach(pic, "image/png", scenario.getName());
         closeBrowser();
+
     }
 
 }
