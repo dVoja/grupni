@@ -12,6 +12,7 @@ public class LoginSteps extends CommonMethods {
     public void user_enters_admin_username_and_password() {
         login.enterUsername();
         login.enterPassword();
+        click(login.loginButton);
     }
     @When("user clicks on login button")
     public void user_clicks_on_login_button() {
@@ -28,18 +29,15 @@ public class LoginSteps extends CommonMethods {
         sendText(usernameValue, login.usernameField);
         sendText(passwordValue, login.passwordField);
         click(login.loginButton);
-        //to get the error message, we need this web element
         WebElement errorLoc = driver.findElement(By.id("spanMessage"));
         String errorMessageValue = errorLoc.getText();
-        //System.out.println(errorMessageValue);
-        //validation of error message is pending
-
         Assert.assertEquals(errorMessage, errorMessageValue);
     }
     @When("user enters employee username and password")
     public void user_enters_employee_username_and_password() {
         login.enterEmpUsername();
         login.enterEmpPassword();
+        click(login.loginButton);
     }
 
 

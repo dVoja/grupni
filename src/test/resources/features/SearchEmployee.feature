@@ -16,6 +16,7 @@ Feature: Employee Search
   @searchEmployee
   Scenario: Search for an employee by unique employee ID
     When Admin search for an employee using their unique employee ID
+
     Then the search should return the exact employee record associated with the provided employee ID
   @searchEmployee
   Scenario: Display "No Records Found" message when no matching employee records are found

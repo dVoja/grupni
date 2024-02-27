@@ -65,5 +65,4 @@ public class SearchEmployeeSteps extends CommonMethods {
         String expectedMsg = errorMess.getText();
         Assert.assertEquals("No Records Found", expectedMsg);
     }
-
 }

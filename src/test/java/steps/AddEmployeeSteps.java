@@ -3,9 +3,16 @@ package steps;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import utils.CommonMethods;
+import utils.ConfigReader;
+
+import java.io.ObjectInputFilter;
 
 public class AddEmployeeSteps extends CommonMethods {
+
+    String searchedName = "ana banana";
     @When("user clicks on PIM option")
     public void user_clicks_on_pim_option() {
        click(dashboardPage.pimOption);
