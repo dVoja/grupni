@@ -12,6 +12,7 @@ public class LoginSteps extends CommonMethods {
     public void user_enters_admin_username_and_password() {
         login.enterUsername();
         login.enterPassword();
+        click(login.loginButton);
     }
     @When("user clicks on login button")
     public void user_clicks_on_login_button() {
@@ -36,6 +37,7 @@ public class LoginSteps extends CommonMethods {
     public void user_enters_employee_username_and_password() {
         login.enterEmpUsername();
         login.enterEmpPassword();
+        click(login.loginButton);
     }
 
 

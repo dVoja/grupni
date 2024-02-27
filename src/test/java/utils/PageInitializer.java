@@ -11,9 +11,9 @@ public class PageInitializer {
     public static EmployeeMyInfoPage employeeMyInfoPage;
     public static LanguageProficiencyPage languageProficiencyPage;
     public static AddLanguagePage addLanguagePage;
-
-
+    public static UpdateEmployeePage updateEmployeePage;
     public static AdminMembershipsPage adminMembershipsPage;
+    public static JobDetailsPage jobDetailsPage;
     public static void initializePageObjects(){
         login = new LoginPage();
         dashboardPage = new DashboardPage();
@@ -24,6 +24,8 @@ public class PageInitializer {
         employeeMyInfoPage = new EmployeeMyInfoPage();
         languageProficiencyPage = new LanguageProficiencyPage();
         addLanguagePage = new AddLanguagePage();
+        updateEmployeePage = new UpdateEmployeePage();
+        jobDetailsPage = new JobDetailsPage();
 
     }
 }
