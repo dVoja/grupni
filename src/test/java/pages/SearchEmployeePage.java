@@ -21,7 +21,7 @@ public class SearchEmployeePage extends CommonMethods {
     public String empId = "92047488";
 
     public void enterEmployeeName(){
-        sendText(ConfigReader.read("employeeSearchName"), searchEmployeePage.empNameLoc);
+        sendText(ConfigReader.read("employeeSearchName"), employeeSearchPage.empNameLoc);
     }
 
     public SearchEmployeePage(){

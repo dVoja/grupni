@@ -17,14 +17,14 @@ public class SearchEmployeeSteps extends CommonMethods {
     }
     @When("Admin search for an employee using their full name")
     public void admin_search_for_an_employee_using_their_full_name() {
-        sendText("ana", searchEmployeePage.empNameLoc);
+        sendText("ana", employeeSearchPage.empNameLoc);
     }
 
     @When("Admin search for an employee using partial name with variations in capitalization")
     public void admin_search_for_an_employee_using_partial_name_with_variations_in_capitalization() {
         String partialName = "na";
-        sendText(partialName.toLowerCase(), searchEmployeePage.empNameLoc);
-        click(searchEmployeePage.searchBtn);
+        sendText(partialName.toLowerCase(), employeeSearchPage.empNameLoc);
+        click(employeeSearchPage.searchBtn);
     }
     @Then("the search should return all matching employee records")
     public void the_search_should_return_all_matching_employee_records() {
@@ -47,7 +47,7 @@ public class SearchEmployeeSteps extends CommonMethods {
 
     @When("Admin search for an employee using their unique employee ID")
     public void admin_search_for_an_employee_using_their_unique_employee_id() {
-        sendText("92047488", searchEmployeePage.empIdLoc);
+        sendText("92047488", employeeSearchPage.empIdLoc);
     }
     @Then("the search should return the exact employee record associated with the provided employee ID")
     public void the_search_should_return_the_exact_employee_record_associated_with_the_provided_employee_id() {
@@ -56,8 +56,8 @@ public class SearchEmployeeSteps extends CommonMethods {
 
     @When("Admin search for an employee with non-existent criteria")
     public void admin_search_for_an_employee_with_non_existent_criteria() {
-        sendText("John NonExistentDoe", searchEmployeePage.empIdLoc);
-        click(searchEmployeePage.searchBtn);
+        sendText("John NonExistentDoe", employeeSearchPage.empIdLoc);
+        click(employeeSearchPage.searchBtn);
     }
     @Then("the system should provide a message {string}")
     public void the_system_should_provide_a_message(String string) {
