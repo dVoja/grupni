@@ -6,7 +6,7 @@ public class PageInitializer {
     public static LoginPage login;
     public static DashboardPage dashboardPage;
     public static AddEmployeePage addEmployeePage;
-    public static EmployeeSearchPage employeeSearchPage;
+    public static SearchEmployeePage employeeSearchPage;
     public static EmployeeMembershipPage employeeMembershipPage;
     public static EmployeeMyInfoPage employeeMyInfoPage;
     public static LanguageProficiencyPage languageProficiencyPage;
@@ -18,7 +18,7 @@ public class PageInitializer {
         login = new LoginPage();
         dashboardPage = new DashboardPage();
         addEmployeePage = new AddEmployeePage();
-        employeeSearchPage = new EmployeeSearchPage();
+        employeeSearchPage = new SearchEmployeePage();
         adminMembershipsPage = new AdminMembershipsPage();
         employeeMembershipPage = new EmployeeMembershipPage();
         employeeMyInfoPage = new EmployeeMyInfoPage();
